@@ -2,7 +2,7 @@ body {
     font-family: "Libre Franklin", sans-serif;
     font-size: .8rem;
     color: #46433A;
-    background-color: #fdfdfd;
+    background-color: #eeeeee;
     line-height: 1.7;
     overflow-x:hidden
 }
@@ -20,14 +20,21 @@ h6 {
     font-weight:100
 }
 
+p{
+    font-size: 15px;
+}
+
+b{
+    font-size: 15px;
+}
+
 h1, h2, h3, h4, h5 {
     font-family: "Rubik", sans-serif
 }
 
 header {
-    min-width: 250px;
-    flex: 0 0 auto;
-    padding:0px 20px 50px 20px
+    /*min-width: 178px;*/
+    flex: 1 1 auto;
 }
 
 main {
@@ -56,7 +63,7 @@ ul.social {
     text-align:right
 }
 
-ul.social li {
+ul.social ul {
     display: inline-block;
     margin:0 5%
 }
@@ -92,10 +99,12 @@ hr {
 
 .wrapper {
     display: flex;
-    max-width: 65rem;
-    padding: 5rem 1rem 5rem 1rem;
-    margin: auto;
-    justify-content:center
+    max-width: 55rem;
+    padding: 5rem 1rem 5rem 4rem;
+    margin: 20em auto auto auto;
+    justify-content:center;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 15px;
 }
 
 a:link, a:visited, a:hover, a:active {
@@ -107,18 +116,28 @@ a:hover {
     text-decoration:underline
 }
 
+a#chn-name-link {
+    color:#46433A;
+}
+
 a#name-link {
-    color:#46433A
+    color:#46433A;
 }
 
 .author-container h1 {
-    font-size: 2.8em;
+    font-size: 2em;
     margin-top: 0;
     margin-bottom:0
 }
 
 .pub {
-    margin:15px 0px
+    margin:2rem 0px;
+    background-color: #ececef;
+    border-radius: 15px;
+}
+
+.pub .pub-content{
+    padding: 1rem 1rem 1rem 1rem;
 }
 
 .pub p {
@@ -273,7 +292,7 @@ img + em {
 
     .wrapper {
         flex-direction: row;
-        width: 85%;
+        width: 65%;
     }
 
     .sidebar-nav {
