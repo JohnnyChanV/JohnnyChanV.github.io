@@ -253,7 +253,7 @@ img + em {
 
     .wrapper {
         flex-direction: column;
-        width: 100%;
+        /*width: 100%;*/
         justify-content:flex-start
     }
 
