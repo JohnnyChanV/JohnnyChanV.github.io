@@ -39,7 +39,7 @@ header {
 
 main {
     flex: 1 1 auto;
-    margin:0 10%
+    margin: 0 0 0 5%;
 }
 
 main > h1 {
@@ -99,12 +99,12 @@ hr {
 
 .wrapper {
     display: flex;
-    max-width: 55rem;
-    padding: 5rem 1rem 5rem 4rem;
-    margin: 20em auto auto auto;
+    max-width: 65rem;
+    padding: 5rem 4rem 5rem 4rem;
+    margin: auto auto auto auto;
     justify-content:center;
     background-color: rgba(255, 255, 255, 0.6);
-    border-radius: 15px;
+    /*border-radius: 15px;*/
 }
 
 a:link, a:visited, a:hover, a:active {
@@ -131,9 +131,15 @@ a#name-link {
 }
 
 .pub {
-    margin:2rem 0px;
-    background-color: #ececef;
-    border-radius: 15px;
+    /*margin: 1rem 0 1rem;*/
+    /* background-color: #ececef; */
+    /* border-radius: 2px;*/
+    border-bottom: 0.1rem solid rgba(138, 134, 134, 0.6); /* 需要指定边框的宽度和样式 */
+    transition: background-color 0.3s ease; /* 平滑过渡效果 */
+}
+
+.pub:hover {
+    background-color: rgba(138, 134, 134, 0.12); /* 鼠标悬停时背景变为浅灰色 */
 }
 
 .pub .pub-content{
@@ -267,8 +273,6 @@ img + em {
 
     main {
         flex: 1 1 auto;
-        margin: 0 10%;
-        margin-bottom:60px
     }
 
     ul.social {
@@ -305,7 +309,7 @@ img + em {
     }
 
     main {
-        margin:0 5%
+        margin:0 0 0 5%
     }
 
     #gallery {
