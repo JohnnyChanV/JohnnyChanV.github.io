@@ -138,6 +138,10 @@ a#name-link {
     transition: background-color 0.3s ease; /* 平滑过渡效果 */
 }
 
+.pub-title {
+    color: #456fc3; /* 浅蓝色 */
+}
+
 .pub:hover {
     background-color: rgba(138, 134, 134, 0.12); /* 鼠标悬停时背景变为浅灰色 */
 }
