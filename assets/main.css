@@ -140,7 +140,7 @@ hr {
 .header-wrapper {
     display: flex;
     /*width: 900px;*/
-    /*max-width: 900px;*/
+    max-width: 750px;
     /*max-width: 1200px;*/
     /*padding: 5rem 4rem 5rem 4rem;*/
     /*margin: 10rem auto auto auto;*/
@@ -156,9 +156,9 @@ hr {
     flex-direction: column;
     /*width: 900px;*/
     max-width: 750px;
-    /*max-width: 1200px;*/
+    /*min-width: 500px;*/
     padding: 5rem 4rem 5rem 4rem;
-    margin: 10rem auto auto auto;
+    margin: auto auto auto auto;
     justify-content:center;
     background-color: rgba(255, 255, 255, 0.6);
     /*border-radius: 15px;*/
@@ -332,7 +332,7 @@ img + em {
 
 
 
-@media (max-width: 900px) {
+@media (max-width: 750px) {
 
     .author-container{
         text-align: center;
