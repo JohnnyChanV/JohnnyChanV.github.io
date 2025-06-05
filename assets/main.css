@@ -138,8 +138,8 @@ hr {
 
 .wrapper {
     display: flex;
-    max-width: 65rem;
-    min-width: 600px;
+    max-width: 900px;
+    /*min-width: 600px;*/
     padding: 5rem 4rem 5rem 4rem;
     margin: 10rem auto auto auto;
     justify-content:center;
@@ -164,10 +164,14 @@ a#name-link {
     color:#46433A;
 }
 
+.author-container{
+    text-align: right;
+}
+
 .author-container h1 {
     font-size: 2em;
     margin-top: 0;
-    margin-bottom:0
+    margin-bottom:0;
 }
 
 .pub {
@@ -374,3 +378,12 @@ img + em {
 /*        column-count: 1*/
 /*    }*/
 /*}*/
+
+
+/* 当屏幕宽度小于900px时，按比例缩放 */
+@media (max-width: 900px) {
+    .wrapper {
+        transform: scale(calc(100vw / 900));
+    }
+}
+
