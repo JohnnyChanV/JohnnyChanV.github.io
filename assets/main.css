@@ -139,7 +139,7 @@ hr {
 .wrapper {
     display: flex;
     max-width: 65rem;
-    /*min-width: 600px;*/
+    min-width: 600px;
     padding: 5rem 4rem 5rem 4rem;
     margin: 10rem auto auto auto;
     justify-content:center;
