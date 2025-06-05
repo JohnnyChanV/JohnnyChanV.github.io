@@ -1,6 +1,36 @@
+@font-face {
+    font-family: 'TeXGyrePagella';
+    src: url('fonts/texgyrepagella-regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TeXGyrePagella';
+    src: url('fonts/texgyrepagella-bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TeXGyrePagella';
+    src: url('fonts/texgyrepagella-italic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TeXGyrePagella';
+    src: url('fonts/texgyrepagella-bolditalic.otf') format('opentype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+
 body {
-    font-family: "Libre Franklin", sans-serif;
-    font-size: .8rem;
+    font-family: 'TeXGyrePagella', serif;
+    /*font-family: 'Songti SC', serif;*/
+    font-size: 15px;
     color: #46433A;
     background-color: #eeeeee;
     line-height: 1.7;
@@ -12,7 +42,9 @@ h1 {
 }
 
 h2 {
-    font-size:1.5em
+    font-size:1.5em;
+    border-bottom: 1px solid rgba(206, 83, 77, 0.58); /* 设置1px黑色实线下划线 */
+
 }
 
 h6 {
@@ -29,7 +61,14 @@ b{
 }
 
 h1, h2, h3, h4, h5 {
-    font-family: "Rubik", sans-serif
+
+    font-family: 'TeXGyrePagella', serif;
+    /*font-family: 'Songti SC', serif;*/
+
+}
+
+.sub-sec h1,h2{
+    color: #CE534D;
 }
 
 header {
@@ -100,8 +139,9 @@ hr {
 .wrapper {
     display: flex;
     max-width: 65rem;
+    /*min-width: 600px;*/
     padding: 5rem 4rem 5rem 4rem;
-    margin: auto auto auto auto;
+    margin: 10rem auto auto auto;
     justify-content:center;
     background-color: rgba(255, 255, 255, 0.6);
     /*border-radius: 15px;*/
@@ -134,7 +174,7 @@ a#name-link {
     /*margin: 1rem 0 1rem;*/
     /* background-color: #ececef; */
     /* border-radius: 2px;*/
-    border-bottom: 0.1rem solid rgba(138, 134, 134, 0.6); /* 需要指定边框的宽度和样式 */
+    /*border-bottom: 0.1rem solid rgba(138, 134, 134, 0.6); !* 需要指定边框的宽度和样式 *!*/
     transition: background-color 0.3s ease; /* 平滑过渡效果 */
 }
 
@@ -255,7 +295,11 @@ img + em {
     transform:scale(1)
 }
 
-@media (max-width: 900px) {
+.author-container img{
+    width: 170px;
+}
+
+@media (max-width: 1200px) {
     .text-content-container img {
         width: 100%;
         margin-top:20px
@@ -285,7 +329,7 @@ img + em {
     }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1200px) {
     .text-content-container img {
         width: 150%;
         margin-top: 20px;
