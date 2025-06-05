@@ -380,10 +380,3 @@ img + em {
 /*}*/
 
 
-/* 当屏幕宽度小于900px时，按比例缩放 */
-@media (max-width: 900px) {
-    .wrapper {
-        transform: scale(calc(100vw / 900));
-    }
-}
-

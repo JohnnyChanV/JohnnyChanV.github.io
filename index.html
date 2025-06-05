@@ -23,17 +23,6 @@
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-D0BTECR8DX"></script>
-    <script>
-        function scaleWrapper() {
-            const wrapper = document.querySelector('.wrapper');
-            const screenWidth = window.innerWidth;
-            const scaleRatio = screenWidth < 900 ? screenWidth / 900 : 1;
-            wrapper.style.transform = `scale(${scaleRatio})`;
-        }
-
-        window.addEventListener('resize', scaleWrapper);
-        window.addEventListener('DOMContentLoaded', scaleWrapper);
-    </script>
 
     <script>
         window.dataLayer = window.dataLayer || [];
