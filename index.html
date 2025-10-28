@@ -44,7 +44,20 @@
                 <h1>CHEN</h1>
                 <h1>陈卓玮</h1>
 
-                <img src="/images/pic.jpg" />
+
+                <img id="photo" src="/images/1.jpg" />
+                <script>
+                    // 获取 <img> 元素
+                    const img = document.querySelector('img');
+
+                    // 生成随机数（例如 1 到 5）
+                    const randomNumber = Math.floor(Math.random() * 5) + 1;
+
+                    // 修改图片路径
+                    img.src = `/images/${randomNumber}.jpg`;
+
+                </script>
+
                 <br>
                 <a href="https://visitorbadge.io/status?path=http%3A%2F%2Fjohnnychanv.github.io"><img src="https://api.visitorbadge.io/api/combined?path=http%3A%2F%2Fjohnnychanv.github.io&labelColor=%23d9e3f0&countColor=%23ff8a65" /></a>
                 <br>
