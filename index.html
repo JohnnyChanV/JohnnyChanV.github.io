@@ -34,106 +34,145 @@
 
 </head>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const tabPanels = document.querySelectorAll('.tab-panel');
+
+        function activateTab(tabName, updateHash = true) {
+            // 激活按钮
+            tabButtons.forEach(btn => {
+                if (btn.dataset.tab === tabName) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+
+            // 显示对应内容
+            tabPanels.forEach(panel => {
+                if (panel.id === tabName) {
+                    panel.classList.add('active');
+                } else {
+                    panel.classList.remove('active');
+                }
+            });
+
+            // 更新 URL hash（可选）
+            if (updateHash) {
+                history.replaceState(null, '', '#' + tabName);
+            }
+        }
+
+        // 绑定点击事件
+        tabButtons.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();                 // 不让浏览器默认滚动跳转
+                const tabName = this.dataset.tab;   // 取 data-tab
+                activateTab(tabName);
+            });
+        });
+
+        // 刷新 / 直接访问带 hash 的地址时，自动切到对应的 tab
+        const initialHash = window.location.hash.replace('#', '') || 'bio';
+        activateTab(initialHash, false);
+    });
+</script>
+
 <div class="wrapper">
 
-    <div class="header-wrapper">
-        <header>
+    <!-- Tabs -->
+    <div class="tabs">
+        <a href="#bio" class="tab-btn active" data-tab="bio" style="color: #eeeeee" >Biography</a>
+        <a href="#gallery" class="tab-btn" data-tab="gallery" style="color: #eeeeee">Gallery</a>
+    </div>
 
-            <div class="author-container">
-                <h1>Zhuowei</h1>
-                <h1>CHEN</h1>
-                <h1>陈卓玮</h1>
+    <!-- Tab 内容：Biography -->
+    <div class="tab-panel active" id="bio">
+        <div class="header-wrapper">
+            <header>
 
 
-                <img id="photo" src="/images/1.jpg" />
-                <script>
-                    // 获取 <img> 元素
-                    const img = document.querySelector('#photo');
+                <div class="author-container">
+                    <h1>Zhuowei</h1>
+                    <h1>CHEN</h1>
+                    <h1>陈卓玮</h1>
 
-                    // 生成随机数（例如 1 到 5）
-                    const randomNumber = Math.floor(Math.random() * 5) + 1;
 
-                    // 修改图片路径
-                    img.src = `/images/${randomNumber}.jpg`;
+                    <img id="photo" src="/images/1.jpg" />
+                    <script>
+                        const img = document.querySelector('#photo');
+                        const randomNumber = Math.floor(Math.random() * 5) + 1;
+                        img.src = `/images/${randomNumber}.jpg`;
+                    </script>
 
-                </script>
 
-                <br>
-                <a href="https://visitorbadge.io/status?path=http%3A%2F%2Fjohnnychanv.github.io"><img src="https://api.visitorbadge.io/api/combined?path=http%3A%2F%2Fjohnnychanv.github.io&labelColor=%23d9e3f0&countColor=%23ff8a65" /></a>
-                <br>
+                    <br>
 
-                <div style="width:12rem; display: flex; justify-content: space-between; margin:auto">
-                    <a href="mailto:zhuowei.chen@pitt.edu" target="_blank"><i class="far fa-envelope"></i></a>
-                    <a href="//github.com/JohnnyChanV"><i class="fab fa-github"></i></a>
-                    <a href="https://instagram.com/johnnychan.__"><i class="fab fa-instagram"></i></a>
-                    <a href="CV.2025.1010.pdf">[CV]</a>
+
+                    <div style="width:12rem; display: flex; justify-content: space-between; margin:auto">
+                        <a href="mailto:zhuowei.chen@pitt.edu" target="_blank"><i class="far fa-envelope"></i></a>
+                        <a href="//github.com/JohnnyChanV"><i class="fab fa-github"></i></a>
+                        <a href="https://instagram.com/johnnychan.__"><i class="fab fa-instagram"></i></a>
+                        <a href="CV.2025.1010.pdf">[CV]</a>
+                    </div>
+
+
+
                 </div>
 
-            </div>
-
-            <p></p>
+                <p></p>
 
 
-            <!--        <div style="display: flex; max-width: 178px; justify-content: space-between; margin: 4rem auto auto auto">-->
-            <!--            <img src="logos/gdufs.jpg" style="height:       35px; margin-right: 10px;">-->
-            <!--            <img src="logos/dmlab.png" style="height:       35px; margin-right: 10px;">-->
-            <!--            <img src="logos/berkeley.webp" style="height:   35px; margin-right: 10px;">-->
-            <!--        </div>-->
+            </header>
+
+            <main>
+                <h1 id="hi">Hi All! </h1>
+                <h3>
+                    🧑‍🎓 CS PhD Student @ UPitts
+                    <br>
+                    🔬 NLP and Large Language Model Researcher
+                    <br>
+                    <!--                🎓 Final Year Undergraduate Student @ GDUFS-->
+                </h3>
 
 
+                <p>
+                    My name is Zhuowei/Johnny. I'm an incoming CS PhD student at <a href='https://www.pitt.edu'>University of Pittsburgh</a>,
+                    closely work with <a href="http://lorraine333.github.io">Prof. Lorraine Li</a>.
 
+                    <br><br>
 
+                    I completed my bachelor study at <a href='https://english.gdufs.edu.cn'>Guangdong University of Foreign Studies - 广外</a>
+                    and <a href="https://www.berkeley.edu">UC Berkeley</a> (Year-3), with a degree in Software Engineering.
+                    During the undergrad study, I actively work with <a href="https://sist.gdufs.edu.cn/info/1378/4115.htm">Lianxi Wang</a> from Data Mining Lab at GDUFS,
+                    and <a href="https://scpei.github.io">Shichao Pei</a> from UMass Boston.
 
+                    <br><br>
 
+                    I was honored as one of the <strong>Top Ten Outstanding Youths (广外十佳青年)</strong>,
+                    the highest distinction awarded to students across <strong>ALL</strong> students at GDUFS (rk 10/30,000).
 
+                    <br><br>
 
+                    My research interests mainly focus on LLM Applications, LLM Safety, and efficient NLP methods.
 
+                    <br><br>
 
-            <!--        <ul class="sidebar-nav minimal">-->
-            <!--            <li class="sidebar-nav-item"><a href="/cv.pdf">[cv]</a></li>-->
-            <!--        </ul>-->
-        </header>
+                    <strong style="font-style: italic;color: #CE534D"> I am actively seeking LLM/NLP internship positions in the US for Summer'26. </strong>
+                    <br>
+                    <strong style="font-style: italic"> Feel free to reach out for questions and collaborations!</strong>
 
-        <main>
-            <h1 id="hi">Hi All! </h1>
-            <h3>
-                🧑‍🎓 CS PhD Student @ UPitts
-                <br>
-                🔬 NLP and Large Language Model Researcher
-                <br>
-<!--                🎓 Final Year Undergraduate Student @ GDUFS-->
-            </h3>
+                </p>
 
+            </main>
 
-            <p>
-                My name is Zhuowei/Johnny. I'm an incoming CS PhD student at <a href='https://www.pitt.edu'>University of Pittsburgh</a>,
-                            closely work with <a href="http://lorraine333.github.io">Prof. Lorraine Li</a>.
+        </div>
+    </div>
 
-                <br><br>
-
-                I completed my bachelor study at <a href='https://english.gdufs.edu.cn'>Guangdong University of Foreign Studies - 广外</a>
-                and <a href="https://www.berkeley.edu">UC Berkeley</a> (Year-3), with a degree in Software Engineering.
-                During the undergrad study, I actively work with <a href="https://sist.gdufs.edu.cn/info/1378/4115.htm">Lianxi Wang</a> from Data Mining Lab at GDUFS,
-                and <a href="https://scpei.github.io">Shichao Pei</a> from UMass Boston.
-
-                <br><br>
-
-                I was honored as one of the <strong>Top Ten Outstanding Youths (广外十佳青年)</strong>,
-                the highest distinction awarded to students across <strong>ALL</strong> students at GDUFS (rk 10/30,000).
-
-                <br><br>
-
-                My research interests mainly focus on LLM Applications, LLM Safety, and efficient NLP methods.
-
-                <br><br>
-
-                <strong style="font-style: italic;color: #CE534D"> I am actively seeking LLM/NLP internship positions in the US for Summer'26. </strong>
-                <br>
-                <strong style="font-style: italic"> Feel free to reach out for questions and collaborations!</strong>
-
-            </p>
-
-        </main>
+    <!-- Tab 内容：Gallery -->
+    <div class="tab-panel" id="gallery">
+        <p>Coming Soon....</p>
     </div>
 
 

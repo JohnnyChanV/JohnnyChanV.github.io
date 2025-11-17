@@ -157,12 +157,12 @@ hr {
     /*width: 900px;*/
     max-width: 750px;
     /*min-width: 500px;*/
-    padding: 5rem 4rem 5rem 4rem;
+    padding: 2rem 4rem 5rem 4rem;
     margin: auto auto auto auto;
     justify-content:center;
     background-color: rgba(255, 255, 255, 0.6);
     /*border-radius: 15px;*/
-    width: 100%;
+    /*width: 100%;*/
 }
 
 a:link, a:visited, a:hover, a:active {
@@ -330,7 +330,57 @@ img + em {
 }
 
 
+/* Tab 按钮区域 */
+.tabs {
+    /*width: 50%;*/
+    display: flex;
+    justify-content: space-between;   /* 左右均匀分布 */
+    align-items: center;
+    background-color: #CE534D;        /* 背景颜色 */
+    margin-bottom: 2rem;            /* 下部留空 */
+    padding: 0.4rem 0.6rem;
+    border-radius: 6px;
+}
 
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #CE534D;
+    margin-bottom: 1.5rem;
+    padding: 0.4rem 0.6rem;
+    border-radius: 6px;
+}
+
+.tab-btn {
+    color: #ffffff;
+    flex: 1;
+    text-align: center;
+    border: none;
+    background: transparent;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.95rem;
+    cursor: pointer;
+    outline: none;
+    font-family: inherit;
+    opacity: 0.8;
+    text-decoration: none;   /* 去掉链接下划线 */
+}
+
+.tab-btn.active {
+    color: #ffffff;
+    font-weight: 600;
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 4px;
+}
+
+.tab-panel {
+    display: none;
+}
+.tab-panel.active {
+    display: block;
+}
 
 @media (max-width: 750px) {
 
@@ -348,11 +398,6 @@ img + em {
         width: 100%;
     }
 
-    .wrapper{
-        margin-top: 5rem;
-        /*margin: 1rem;*/
-        width: 100%;
-    }
 
     body{
         /*padding: 1rem;*/
