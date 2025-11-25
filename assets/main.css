@@ -140,7 +140,8 @@ hr {
 .header-wrapper {
     display: flex;
     /*width: 900px;*/
-    max-width: 750px;
+    max-width: 90%;
+    margin: auto;
     /*max-width: 1200px;*/
     /*padding: 5rem 4rem 5rem 4rem;*/
     /*margin: 10rem auto auto auto;*/
@@ -155,7 +156,7 @@ hr {
     display: flex;
     flex-direction: column;
     /*width: 900px;*/
-    max-width: 750px;
+    max-width: 900px;
     /*min-width: 500px;*/
     padding: 2rem 4rem 5rem 4rem;
     margin: auto auto auto auto;
@@ -326,13 +327,14 @@ img + em {
 }
 
 .edu-item img{
-    width: 20%; margin-right: 2.5rem; margin-left: 2.5rem;
+    width: 10%; margin-right: 2.5rem; margin-left: 2.5rem;
 }
 
 
 /* Tab 按钮区域 */
 .tabs {
-    /*width: 50%;*/
+    width: 90%;
+    margin: auto;
     display: flex;
     justify-content: space-between;   /* 左右均匀分布 */
     align-items: center;
