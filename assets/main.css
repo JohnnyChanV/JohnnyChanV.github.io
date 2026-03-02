@@ -566,6 +566,9 @@ img + em {
 .lightbox-img {
     max-width: 88vw;
     max-height: 88vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
     border-radius: 6px;
     box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
     user-select: none;
