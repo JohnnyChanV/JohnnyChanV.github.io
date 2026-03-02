@@ -518,6 +518,24 @@ img + em {
     opacity: 1;
 }
 
+/* ====== Gallery Header ====== */
+.gallery-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.gallery-header h2 {
+    border-bottom: none;
+    color: #46433A;
+    margin-bottom: 0.2rem;
+}
+
+.gallery-header p {
+    color: #888;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
 /* ====== Gallery Scroll Container ====== */
 .gallery-scroll {
     max-height: 600px;
