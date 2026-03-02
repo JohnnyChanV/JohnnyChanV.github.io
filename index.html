@@ -165,16 +165,10 @@
 
     <!-- Tab 内容：Gallery -->
     <div class="tab-panel" id="gallery">
-        <div class="gallery-grid" id="gallery-grid"></div>
-        <p class="gallery-empty" id="gallery-empty" style="display:none; text-align:center; color:#999;">No photos yet.</p>
-
-        <!-- Lightbox -->
-        <div class="lightbox" id="lightbox">
-            <button class="lightbox-close" id="lightbox-close">&times;</button>
-            <button class="lightbox-prev" id="lightbox-prev">&#8249;</button>
-            <img class="lightbox-img" id="lightbox-img" src="" alt="">
-            <button class="lightbox-next" id="lightbox-next">&#8250;</button>
+        <div class="gallery-scroll">
+            <div class="gallery-grid" id="gallery-grid"></div>
         </div>
+        <p class="gallery-empty" id="gallery-empty" style="display:none; text-align:center; color:#999;">No photos yet.</p>
     </div>
 
 
@@ -413,22 +407,18 @@
 
     const grid = document.getElementById('gallery-grid');
     const emptyMsg = document.getElementById('gallery-empty');
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    let images = [];
-    let currentIdx = 0;
 
     fetch('https://api.github.com/repos/' + REPO + '/contents/' + FOLDER)
         .then(function (r) { return r.json(); })
         .then(function (files) {
             if (!Array.isArray(files)) { emptyMsg.style.display = 'block'; return; }
-            images = files
+            var images = files
                 .filter(function (f) { return IMG_EXTS.test(f.name); })
                 .sort(function (a, b) { return a.name.localeCompare(b.name); });
 
             if (images.length === 0) { emptyMsg.style.display = 'block'; return; }
 
-            images.forEach(function (file, idx) {
+            images.forEach(function (file) {
                 var item = document.createElement('div');
                 item.className = 'gallery-item';
 
@@ -436,49 +426,12 @@
                 img.src = file.download_url;
                 img.alt = file.name;
                 img.loading = 'lazy';
-                img.addEventListener('click', function () { openLightbox(idx); });
 
                 item.appendChild(img);
                 grid.appendChild(item);
             });
         })
         .catch(function () { emptyMsg.style.display = 'block'; });
-
-    function openLightbox(idx) {
-        currentIdx = idx;
-        lightboxImg.src = images[idx].download_url;
-        lightbox.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    }
-
-    function closeLightbox() {
-        lightbox.classList.remove('active');
-        document.body.style.overflow = '';
-    }
-
-    document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
-    lightbox.addEventListener('click', function (e) {
-        if (e.target === lightbox) closeLightbox();
-    });
-
-    document.getElementById('lightbox-prev').addEventListener('click', function (e) {
-        e.stopPropagation();
-        currentIdx = (currentIdx - 1 + images.length) % images.length;
-        lightboxImg.src = images[currentIdx].download_url;
-    });
-
-    document.getElementById('lightbox-next').addEventListener('click', function (e) {
-        e.stopPropagation();
-        currentIdx = (currentIdx + 1) % images.length;
-        lightboxImg.src = images[currentIdx].download_url;
-    });
-
-    document.addEventListener('keydown', function (e) {
-        if (!lightbox.classList.contains('active')) return;
-        if (e.key === 'Escape') closeLightbox();
-        if (e.key === 'ArrowLeft') document.getElementById('lightbox-prev').click();
-        if (e.key === 'ArrowRight') document.getElementById('lightbox-next').click();
-    });
 })();
 </script>
 
