@@ -552,17 +552,19 @@ img + em {
     border-radius: 6px;
     overflow: hidden;
     position: relative;
+    cursor: pointer;
 }
 
 .gallery-item img {
     width: 100%;
     display: block;
     border-radius: 6px;
-    transition: filter 0.3s ease;
+    transition: transform 0.35s ease, filter 0.35s ease;
 }
 
 .gallery-item:hover img {
-    filter: brightness(0.93);
+    transform: scale(1.03);
+    filter: brightness(0.92);
 }
 
 /* ====== Greeting ====== */
