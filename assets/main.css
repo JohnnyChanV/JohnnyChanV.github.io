@@ -369,12 +369,13 @@ img + em {
 }
 
 .edu-item img {
-    height: 3.2rem;
-    width: auto;
-    max-width: 20%;
+    height: auto;
+    max-height: 3.2rem;
+    width: 5rem;
+    min-width: 5rem;
     object-fit: contain;
-    margin-right: 2.5rem;
-    margin-left: 2.5rem;
+    margin-right: 2rem;
+    margin-left: 1.5rem;
 }
 
 /* ====== News Section ====== */
@@ -629,11 +630,13 @@ main > h3 {
     }
 
     .edu-item img {
-        height: 2.5rem;
-        width: auto;
-        max-width: 20%;
-        margin-right: 1.2rem;
-        margin-left: 1.2rem;
+        height: auto;
+        max-height: 2.5rem;
+        width: 4rem;
+        min-width: 4rem;
+        object-fit: contain;
+        margin-right: 1rem;
+        margin-left: 0.8rem;
     }
 
     .gallery-grid {
