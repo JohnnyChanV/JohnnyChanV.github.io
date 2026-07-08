@@ -1,0 +1,41 @@
+name: Google Scholar Crawler
+
+on:
+  schedule:
+    # Runs every Sunday at 01:00 UTC
+    - cron: "0 1 * * 0"
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  google-scholar-crawler:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r google_scholar_crawler/requirements.txt
+
+      - name: Run the crawler
+        env:
+          # Public Google Scholar profile id (from your ?user=... URL)
+          GOOGLE_SCHOLAR_ID: "C727rQYAAAAJ"
+        run: python google_scholar_crawler/main.py
+
+      - name: Deploy citation data to google-scholar-stats branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./results
+          publish_branch: google-scholar-stats
+          force_orphan: true
