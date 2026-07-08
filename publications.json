@@ -1,0 +1,89 @@
+[
+  {
+    "title": "Rethinking Post-training Diversity Collapse: Is Diversity-preserving Post-training Enough?",
+    "authors": "Zhaoyi Joey Hou, <strong>Zhuowei Chen</strong>, Mengxue Zhang, Xiang Lorraine Li.<i class=\"far fa-envelope\"></i>",
+    "venue": "Human-AI Co-Creativity @ ICML 2026",
+    "links": []
+  },
+  {
+    "title": "Neuron-Aware Data Selection for Annotation-Free LLM Self-Distillation.",
+    "authors": "<strong>Zhuowei Chen</strong>, Xiang Lorraine Li<i class=\"far fa-envelope\"></i>",
+    "venue": "DEMO @ ICML 2026",
+    "links": [
+      { "label": "Paper", "href": "https://arxiv.org/pdf/2607.02460" },
+      { "label": "Site", "href": "https://arxiv.org/abs/2607.02460" },
+      { "label": "Poster", "href": "pub_poster/ICML2026_poster.pdf" }
+    ]
+  },
+  {
+    "title": "Neuron-Aware Active Few-Shot Learning for LLMs.",
+    "authors": "<strong>Zhuowei Chen</strong>, Liwei Chen, Christian Schunn, Raquel Coelho, Xiang Lorraine Li<i class=\"far fa-envelope\"></i>",
+    "venue": "ACL 2026 Main (Oral)",
+    "links": [
+      { "label": "Paper", "href": "https://aclanthology.org/2026.acl-long.1526.pdf" },
+      { "label": "Site", "href": "https://aclanthology.org/2026.acl-long.1526/" },
+      { "label": "Code", "href": "https://github.com/JohnnyChanV/NeuFS" }
+    ]
+  },
+  {
+    "title": "Unlocking LLM Safeguards for Low-Resource Languages via Reasoning and Alignment with Minimal Training Data.",
+    "authors": "<strong>Zhuowei Chen</strong>, Bowei Zhang, Nankai Lin, Tian Hou, Lianxi Wang",
+    "venue": "MRL Workshop @ EMNLP 2025",
+    "links": [
+      { "label": "Paper", "href": "https://arxiv.org/pdf/2510.10677" },
+      { "label": "Poster", "href": "pub_poster/2025.emnlp.mrl.workshop.pdf" },
+      { "label": "Code", "href": "https://github.com/johnnychanv/ConsistentGuard" }
+    ]
+  },
+  {
+    "title": "Injecting Universal Jailbreak Backdoors to LLMs in Minutes.",
+    "authors": "<strong>Zhuowei Chen</strong>, Qiannan Zhang, Shichao Pei<i class=\"far fa-envelope\"></i>",
+    "venue": "ICLR 2025",
+    "links": [
+      { "label": "Paper", "href": "https://openreview.net/pdf?id=aSy2nYwiZ2" },
+      { "label": "Site", "href": "https://openreview.net/forum?id=aSy2nYwiZ2" },
+      { "label": "Poster", "href": "pub_poster/2025.iclr-main.pdf" },
+      { "label": "Code", "href": "https://github.com/JohnnyChanV/JailbreakEdit" }
+    ]
+  },
+  {
+    "title": "An Effective Deployment of Diffusion LM for Data Augmentation in Low-Resource Sentiment Classification",
+    "authors": "<strong>Zhuowei Chen</strong>, Yuben Wu, Xinfeng Liao, Yujia Tian, Junyang Zhong, Lianxi Wang<i class=\"far fa-envelope\"></i>",
+    "venue": "EMNLP 2024 Main",
+    "links": [
+      { "label": "Paper", "href": "https://aclanthology.org/2024.emnlp-main.109.pdf" },
+      { "label": "Site", "href": "https://aclanthology.org/2024.emnlp-main.109/" },
+      { "label": "Poster", "href": "pub_poster/2024.emnlp-main.pdf" },
+      { "label": "Code", "href": "https://github.com/JohnnyChanV/DiffusionCLS" }
+    ]
+  },
+  {
+    "title": "Enhancing Hindi Feature Representation Through Fusion of Dual-Script Word Embeddings",
+    "authors": "Lianxi Wang, Yujia Tian*, <strong>Zhuowei Chen*<i class=\"far fa-envelope\"></i></strong>",
+    "venue": "LREC-COLING 2024",
+    "links": [
+      { "label": "Paper", "href": "https://aclanthology.org/2024.lrec-main.528.pdf" },
+      { "label": "Site", "href": "https://aclanthology.org/2024.lrec-main.528/" },
+      { "label": "Poster", "href": "/pub_poster/2024.lrec-main.528-poster.pdf" },
+      { "label": "Code", "href": "https://github.com/JohnnyChanV/Hindi-Fusion" }
+    ]
+  },
+  {
+    "title": "A Distantly-Supervised Relation Extraction Method Based on Selective Gate and Noise Correction",
+    "authors": "<strong>Zhuowei Chen</strong>, Yujia Tian, Lianxi Wang<i class=\"far fa-envelope\"></i>, Shengyi Jiang",
+    "venue": "Chinese National Conference on Computational Linguistic, CCL 2023",
+    "links": [
+      { "label": "Paper", "href": "https://aclanthology.org/2023.ccl-1.63.pdf" },
+      { "label": "Site", "href": "https://aclanthology.org/2023.ccl-1.63/" },
+      { "label": "Poster", "href": "/pub_poster/2023.ccl-1.63-poster.pdf" },
+      { "label": "Code", "href": "https://github.com/JohnnyChanV/PLMG-Pencil" }
+    ]
+  },
+  {
+    "title": "OTESGN: Optimal Transport Enhanced Syntactic-Semantic Graph Networks for Aspect-Based Sentiment Analysis",
+    "authors": "Xinfeng Liao, Xuanqi Chen, Lianxi Wang, Jiahuan Yang, <strong>Zhuowei Chen</strong>, Ziying Rong",
+    "venue": "International Conference on Data Mining (ICDM 2025)",
+    "venueItalic": true,
+    "links": []
+  }
+]
