@@ -218,17 +218,14 @@ a#name-link {
     background-color: rgba(206, 83, 77, 0.10);
     transform: translateY(-2px);
     text-decoration: none;
-    box-shadow: 0 3px 8px rgba(206, 83, 77, 0.20);
 }
 
 /* ====== Publications ====== */
 .pub {
-    background-color: #eeeeee;
-    border-radius: 8px;
+    transition: background-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+    border-radius: 6px;
     border-left: 3px solid transparent;
-    margin-bottom: 0.7rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.07);
-    transition: background-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease, border-left-color 0.25s ease;
+    margin-bottom: 0.6rem;
 }
 
 .pub-title {
@@ -236,9 +233,9 @@ a#name-link {
 }
 
 .pub:hover {
-    background-color: rgba(69, 111, 195, 0.05);
-    border-left-color: rgba(69, 111, 195, 0.55);
-    box-shadow: 0 6px 18px rgba(69, 111, 195, 0.14);
+    background-color: rgba(69, 111, 195, 0.06);
+    border-left: 3px solid rgba(69, 111, 195, 0.4);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
     transform: translateY(-2px);
 }
 
@@ -364,16 +361,15 @@ img + em {
     display: flex;
     align-items: center;
     flex: 2;
-    padding: 0.7rem 0.9rem;
-    margin-bottom: 0.7rem;
-    border-radius: 10px;
-    background-color: #eeeeee;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    padding: 0.6rem 0.8rem;
+    margin-bottom: 0.6rem;
+    border-radius: 8px;
     transition: background-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
 }
 
 .edu-item:hover {
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    background-color: rgba(0, 0, 0, 0.03);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
     transform: translateY(-2px);
 }
 
@@ -392,10 +388,7 @@ img + em {
     max-height: 140px;
     overflow-y: auto;
     font-size: 0.9rem;
-    padding: 0.5rem 0.6rem;
-    background-color: #eeeeee;
-    border-radius: 10px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    padding: 0.5rem 0;
     scrollbar-width: thin;
     scrollbar-color: rgba(206, 83, 77, 0.3) transparent;
 }
@@ -520,23 +513,6 @@ img + em {
     font-style: italic;
     font-family: 'Times New Roman', serif;
     color: #46433A;
-}
-
-/* ====== Visit Map ====== */
-#visit-log {
-    text-align: center;
-    margin: 3rem auto 0 auto;
-    opacity: 0.8;
-    transition: opacity 0.3s ease;
-}
-
-#visit-log:hover {
-    opacity: 1;
-}
-
-#visit-log img {
-    border-radius: 6px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.10);
 }
 
 /* ====== Gallery Header ====== */
