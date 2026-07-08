@@ -223,7 +223,7 @@ a#name-link {
 
 /* ====== Publications ====== */
 .pub {
-    background-color: #ffffff;
+    background-color: #eeeeee;
     border-radius: 8px;
     border-left: 3px solid transparent;
     margin-bottom: 0.7rem;
@@ -367,7 +367,7 @@ img + em {
     padding: 0.7rem 0.9rem;
     margin-bottom: 0.7rem;
     border-radius: 10px;
-    background-color: #ffffff;
+    background-color: #eeeeee;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
     transition: background-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
 }
@@ -393,7 +393,7 @@ img + em {
     overflow-y: auto;
     font-size: 0.9rem;
     padding: 0.5rem 0.6rem;
-    background-color: #ffffff;
+    background-color: #eeeeee;
     border-radius: 10px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
     scrollbar-width: thin;
