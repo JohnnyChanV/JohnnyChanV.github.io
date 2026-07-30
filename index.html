@@ -372,39 +372,60 @@
     const list = document.getElementById('pub-list');
     if (!list) return;
 
+    // Publications are grouped by type; anything unlabelled falls into Conference.
+    const GROUPS = [
+        { type: 'conference', label: 'Conference Papers' },
+        { type: 'workshop', label: 'Workshop Papers' }
+    ];
+
+    function renderPub(pub) {
+        var wrap = document.createElement('div');
+        wrap.className = 'pub';
+
+        var content = document.createElement('div');
+        content.className = 'pub-content';
+
+        var title = document.createElement('div');
+        title.className = 'pub-title';
+        title.innerHTML = '<b>' + pub.title + '</b>';
+        content.appendChild(title);
+
+        var authors = document.createElement('div');
+        authors.className = 'pub-description';
+        authors.innerHTML = '<p>' + pub.authors + '</p>';
+        content.appendChild(authors);
+
+        var meta = document.createElement('span');
+        meta.className = 'pub-description';
+        var venueStyle = pub.venueItalic ? ' style="font-style: italic"' : '';
+        var html = '<p' + venueStyle + '>' + pub.venue + '</p>';
+        (pub.links || []).forEach(function (l) {
+            html += ' [<a href="' + l.href + '">' + l.label + '</a>]';
+        });
+        meta.innerHTML = html;
+        content.appendChild(meta);
+
+        wrap.appendChild(content);
+        return wrap;
+    }
+
     fetch('publications.json')
         .then(function (r) { return r.json(); })
         .then(function (pubs) {
             if (!Array.isArray(pubs)) throw new Error('bad data');
-            pubs.forEach(function (pub) {
-                var wrap = document.createElement('div');
-                wrap.className = 'pub';
-
-                var content = document.createElement('div');
-                content.className = 'pub-content';
-
-                var title = document.createElement('div');
-                title.className = 'pub-title';
-                title.innerHTML = '<b>' + pub.title + '</b>';
-                content.appendChild(title);
-
-                var authors = document.createElement('div');
-                authors.className = 'pub-description';
-                authors.innerHTML = '<p>' + pub.authors + '</p>';
-                content.appendChild(authors);
-
-                var meta = document.createElement('span');
-                meta.className = 'pub-description';
-                var venueStyle = pub.venueItalic ? ' style="font-style: italic"' : '';
-                var html = '<p' + venueStyle + '>' + pub.venue + '</p>';
-                (pub.links || []).forEach(function (l) {
-                    html += ' [<a href="' + l.href + '">' + l.label + '</a>]';
+            GROUPS.forEach(function (group, i) {
+                var items = pubs.filter(function (pub) {
+                    return (pub.type || 'conference') === group.type;
                 });
-                meta.innerHTML = html;
-                content.appendChild(meta);
+                if (items.length === 0) return;
 
-                wrap.appendChild(content);
-                list.appendChild(wrap);
+                var heading = document.createElement('h3');
+                heading.className = 'pub-group';
+                heading.textContent = group.label;
+                if (i === 0) heading.style.marginTop = '0';
+                list.appendChild(heading);
+
+                items.forEach(function (pub) { list.appendChild(renderPub(pub)); });
             });
         })
         .catch(function () {

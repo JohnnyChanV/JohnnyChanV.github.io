@@ -221,6 +221,16 @@ a#name-link {
 }
 
 /* ====== Publications ====== */
+.pub-group {
+    margin: 1.2rem 0 0.4rem;
+    font-size: 0.95rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #666;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    padding-bottom: 0.25rem;
+}
+
 .pub {
     transition: background-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
     border-radius: 6px;
