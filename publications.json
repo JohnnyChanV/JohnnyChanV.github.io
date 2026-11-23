@@ -7,6 +7,7 @@
     "links": [
       { "label": "Paper", "href": "https://aclanthology.org/2026.acl-long.1526.pdf" },
       { "label": "Site", "href": "https://aclanthology.org/2026.acl-long.1526/" },
+      { "label": "Poster", "href": "pub_poster/2026.acl-poster.pdf" },
       { "label": "Code", "href": "https://github.com/JohnnyChanV/NeuFS" }
     ]
   },
